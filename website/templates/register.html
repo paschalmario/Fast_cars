@@ -1,0 +1,67 @@
+
+{% extends "base.html"%}{% block title %}Home{% endblock %}
+{% block content%}
+<body style="background: #7A73D1;">
+    <header class="header">
+        <a href="#" class="Logo">FastCars.</a>
+
+        <nav class="navbar">
+            <a href="/"  style="--i:1">Home</a>
+            <a href="/contact" style="--i:2">Contact</a>
+        </nav>
+
+        <div class="social-media">
+            <a href="#" style="--i:1" class="active"><i class='bx bxl-twitter'> </i></a>
+            <a href="#" style="--i:2"><i class='bx bxl-facebook'></i></a>
+            <a href="#" style="--i:3"><i class='bx bxl-instagram-alt'></i></a>
+        </div>
+    </header>
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %} {% if category ==
+        'error' %}
+        <div class="alert alert-danger alter-dismissable fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alter-dismissable fade show" role="alert">
+          {{ message }}
+
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endif %} {% endfor %} {% endif %} {% endwith %}
+    <section class="Login">
+        <div class="Login_img2">
+    <img src="{{ url_for('static', filename='images/2022_Hyundai_Tucson_PHEV_Revealed__Offers_32-Mile_Electric_Range-removebg-preview.png') }}" alt="" width="500px"
+            style="margin-left: 100px;">
+        </div>
+        <div class="Login-form">
+            <h1>Welcome to Fast Cars</h1>
+            <p>Best Car renting experience</p>
+            <form method="POST">
+                <input type="text" id="Firstname" placeholder="Enter firstname"><br>
+                <input type="text" name="" id="Lastname" placeholder="Last Name">
+                <input type="number" id="PhoneNumber" placeholder="Phone Number"><br>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <br>
+                <input type="password"id="password1"
+                name="password1" placeholder="set password">
+                <input type="password"id="password2"
+                name="password2" placeholder="re-enter password">
+                
+                <button type="submit">Sign in</button>
+
+                <p>Already have an account <a href="/sign-up">Log-in to account</a></p>
+            </form>
+        </div>
+    </section>
+    <div class="custom-shape-divider-bottom-1742045476">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    {% endblock %}
