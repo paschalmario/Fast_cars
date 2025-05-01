@@ -14,7 +14,9 @@
 
     <header class="header">
         <a href="#" class="Logo">FastCars.</a>
-
+        <div class="menu-toggle" id="menu-toggle">
+            <i class='bx bx-menu' id="menu-icon"></i>
+        </div>
         <nav class="navbar">
             <a href="#" class="active" style="--i:1">Home</a>
             <a href="#" style="--i:2">About</a>
@@ -36,7 +38,7 @@
         </div> -->
 
     </header>
-    <div class="profile">
+    <!-- <div class="profile">
         <img src="{{ url_for('static', filename='images/maleModel.jfif') }}" alt="" id="profile_img">
         <a href="" id="cancel">&times;</a>
           <h2>Hi, John</h2> 
@@ -54,7 +56,7 @@
           <label for="">Add Testimonial</label>
             <input type="note" maxlength="90"> <br>
         <button>Log out</button>
-       </div>
+       </div> -->
     <section class="home">
         <div class="home-content">
             <h1>Fast Cars</h1>
@@ -216,18 +218,22 @@
           </figure>
         </section>
         <script>
-            let cartIcon = document.getElementById('profile_img');
-            let cart = document.querySelector('.profile');
-            let closeCart = document.querySelector('#cancel');
+            const menuToggle = document.getElementById('menu-toggle');
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.getElementById('menu-icon');
         
-        //open cart 
-        cartIcon.onclick = () => {
-            cart.classList.add = ("active1");
-        }
-        //close cart
-        closeCart.onclick = () => {
-            cart.classList.remove("active1");
-        }
+            menuToggle.addEventListener('click', () => {
+                navbar.classList.toggle('active');
+        
+                // Toggle the icon
+                if (navbar.classList.contains('active')) {
+                    menuIcon.classList.remove('bx-menu');
+                    menuIcon.classList.add('bx-x');
+                } else {
+                    menuIcon.classList.remove('bx-x');
+                    menuIcon.classList.add('bx-menu');
+                }
+            });
            </script> 
         {% endblock %}
 

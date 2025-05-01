@@ -191,7 +191,11 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     line-height: 1.2;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
-    animation-delay: 1s;
+    animation-delay: 1s; 
+    background: linear-gradient(to top, purple, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .home-content h3 {
@@ -200,6 +204,10 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: 1.3s;
+    background: linear-gradient(to top, purple, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .home-content p {
@@ -813,4 +821,161 @@ footer {
     background-color: transparent;
     margin-bottom: 5px;
 }
- 
+/* Responsive for tablets and smaller screens */
+@media (max-width: 992px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: center;
+        padding: 120px 5% 50px;
+        text-align: center;
+    }
+
+    .home-content {
+        max-width: 100%;
+    }
+
+
+    .home-img {
+        position: relative;
+        width: 350px;
+        height: 350px;
+        top: -300px;
+        right: 0;
+    }
+
+    .home-img .rhombus img {
+        width: 500px;
+        top: -90px;
+        left: -180px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .social {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-wrapper {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        text-align: center;
+        display: none;
+        flex-direction: column;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-wrapper.active {
+        display: flex;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 15px 0;
+    }
+}
+
+/* Responsive for mobile phones */
+@media (max-width: 576px) {
+    .home-content h1 {
+        font-size: 34px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+        background: linear-gradient(to top, purple, blue);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .home-content p {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+        z-index: 1;
+    }
+
+    .home-img {
+        width: 280px;
+        height: 280px;
+        z-index: -1;
+        margin-bottom: -200px
+
+    }
+
+    .home-img .rhombus img {
+        width: 400px;
+        top: -90px;
+        left: -140px;
+    }
+
+    .home .rhombus2 {
+        width: 400px;
+        height: 400px;
+        top: -40%;
+        right: -40%;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    
+      .testimonial figure {
+        flex: 0 0 90%;
+        scroll-snap-align: start;
+        min-width: 80%;
+        margin-right: 1rem;
+      }
+    .navbar {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 99;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .social{
+        display: none;
+    }
+}
