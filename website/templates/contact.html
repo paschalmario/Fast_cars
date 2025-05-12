@@ -2,6 +2,9 @@
 {% block content%}
 <header class="header">
     <a href="#" class="Logo">FastCars.</a>
+      <div class="menu-toggle" id="menu-toggle">
+            <i class='bx bx-menu' id="menu-icon"></i>
+        </div>
 
     <nav class="navbar">
         <a href="/"  style="--i:1">Home</a>
@@ -53,5 +56,23 @@
     </div>
 
 </div>
+<script>
+            const menuToggle = document.getElementById('menu-toggle');
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.getElementById('menu-icon');
+        
+            menuToggle.addEventListener('click', () => {
+                navbar.classList.toggle('active');
+        
+                // Toggle the icon
+                if (navbar.classList.contains('active')) {
+                    menuIcon.classList.remove('bx-menu');
+                    menuIcon.classList.add('bx-x');
+                } else {
+                    menuIcon.classList.remove('bx-x');
+                    menuIcon.classList.add('bx-menu');
+                }
+            });
+           </script> 
 
 {% endblock%}
