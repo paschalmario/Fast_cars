@@ -129,17 +129,32 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     background-color: white;
     color: #211C84;
     transition: 0.3s ease-in;
+    outline: none;
 }
 #reg:hover {
     background-color: #7A73D1;
     color: white;
-    border-color: white; 
+    border: 1px solid white;
+}
+#reg a {
+    text-decoration: none;
+    color: #211C84
+}
+#reg a:hover {
+    color: white;
 }
 #log {
     background-color: #211C84;
     color: white;
     border: 2px solid white;    
     transition: 0.3s ease-in;
+}
+#log a {
+    text-decoration: none;
+}
+
+#log a:hover{
+     color: #7A73D1;
 }
 #log:hover {
     border-color: #7A73D1;
@@ -347,6 +362,16 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     100% {
         transform: scale(1);
         opacity: 1; 
+     }
+}
+@keyframes zoomOut1 {
+    0% {
+       transform: scale(1.1);
+       opacity: 0; 
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7; 
      }
 }
 @keyframes car {
@@ -585,7 +610,7 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     display: inline-flex;
     width: 80%;
     margin-left: 10%;
-    height: 550px;
+    min-height: 550px;
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -595,7 +620,7 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     width: 75%;
     margin-left: 20%;
     opacity: 0;
-    animation: zoomOut 1s ease forwards;
+    animation: zoomOut1 1s ease forwards;
     animation-delay: 1.6s;
     
 }
@@ -605,6 +630,13 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
+
+.Login-form p {
+    font-size: small;
+}
+.Login-form p a:hover {
+    color: white
+}
 .Login-form input {
     width: 250px;
     padding: 10px;
@@ -612,6 +644,8 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     margin-top: 15px;
     border: none;
     outline: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 .Login-form input:focus {
     border: 2px solid #211C84;
@@ -620,9 +654,19 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 #reset {
     font-size: small;
-    margin-left: 150px;
+    margin-left: 120px;
     color: #211C84;
     font-weight: 500;
+    width: 50%;
+
+}
+#reset a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+}
+#reset a:hover {
+    opacity: 1;
 }
 
 .Login-form button {
@@ -644,6 +688,12 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     border-color: white;
 
 }
+.Login-form label {
+        position: absolute;
+        font-weight: 600;
+        color: white;
+
+    }
 h5 a {
     text-decoration: none;
     color: white;
@@ -796,7 +846,9 @@ footer {
     flex: 1 1 300px;
     max-width: 500px;
 }
-
+ .menu-toggle {
+        display: none;
+    }
 .contact_details .core {
     margin-left: 0;
     font-weight: 600;
@@ -848,6 +900,7 @@ footer {
     font-size: 16px;
     outline: none;
 }
+
 /* Responsive for tablets and smaller screens */
 @media (max-width: 992px) {
     .header {
@@ -910,6 +963,19 @@ footer {
     .navbar a {
         display: block;
         margin: 15px 0;
+    }
+    .Login_img {
+        display: none;
+    }
+    .Login-form {
+        margin-left: 10%;
+    }
+
+    .Login-form label {
+        position: absolute;
+        font-weight: 600;
+        color: white;
+
     }
 }
 

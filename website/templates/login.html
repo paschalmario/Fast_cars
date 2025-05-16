@@ -43,13 +43,15 @@
         <div class="Login-form">
             <h1>Welcome Back</h1>
             <form action="">
-                <input type="email" name="" id="" placeholder="Enter email">
+                <label for="email">Enter Email</label>
+                <input type="email" name="email" id="" placeholder="name@email.com">
                 <br>
-                <input type="password">
-                <p id="reset">Reset password?</p>
+                <label for="password">Enter Password</label>
+                <input type="password" name="password" placeholder="password">
+                <p id="reset"><a href="">Reset password</a></p>
                 <button type="submit">Sign in</button>
 
-                <p>Don't have an account <a  style="cursor: pointer;"  onclick="window.location.href='register.html'">Create an account</a></p>
+                <p>Don't have an account?  <a style="cursor: pointer;"  onclick="window.location.href='register.html'"> Create an account</a></p>
             </form>
         </div>
     </section>

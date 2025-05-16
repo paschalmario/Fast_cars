@@ -35,33 +35,46 @@
         </div>
         {% endif %} {% endfor %} {% endif %} {% endwith %}
     <section class="Login">
-        <div class="Login_img2">
-    <img src="{{ url_for('static', filename='images/2022_Hyundai_Tucson_PHEV_Revealed__Offers_32-Mile_Electric_Range-removebg-preview.png') }}" alt="" width="500px"
-            style="margin-left: 100px;">
+        <div class="Login_img">
+            <img src="{{url_for('static', filename='images/10815908.png')}}" alt="">
         </div>
+        
         <div class="Login-form">
             <h1>Welcome to Fast Cars</h1>
             <p>Best Car renting experience</p>
             <form method="POST">
-                <input type="text" id="Firstname" placeholder="Enter firstname"><br>
-                <input type="text" name="" id="Lastname" placeholder="Last Name">
-                <input type="number" id="PhoneNumber" placeholder="Phone Number"><br>
-                <input type="email" name="email" id="email" placeholder="Email">
+                <label for="firstname">Enter your First name</label>
+                <input type="text" name="firstname" id="Firstname" placeholder="eg. John"><br>
+                <label for="Lastname">Enter your Last name</label>
+                <input type="text" name="Lastname" id="Lastname" placeholder="Last Name"><br>
+                <label for="Phone Number">Input Phone Number</label>
+                <input type="number" id="PhoneNumber" name="PhoneNumber" placeholder="+234 80-123-23-234"><br>
+                <label for="email">Enter your email</label>
+                <input type="email" name="email" id="email" placeholder="johnret@gmail.com"><br>
                 <br>
-                <input type="password"id="password1"
-                name="password1" placeholder="set password">
+                <label for="password1">Enter password</label>
+                <input type="password"  id="password1"
+                name="password1" placeholder=""><br>
+                 <label for="password2">re-Enter password</label>
                 <input type="password"id="password2"
-                name="password2" placeholder="re-enter password">
+                name="password2" placeholder=""><br>
                 
                 <button type="submit">Sign in</button>
 
-                <p>Already have an account <a href="/sign-up">Log-in to account</a></p>
+                <p>Already have an account <a style="cursor: pointer;"  onclick="window.location.href='login.html'">Log-in to account</a></p>
             </form>
+            
+             
         </div>
-    </section>
-    <div class="custom-shape-divider-bottom-1742045476">
+        
+    <div class="custom-shape-divider-top-1742059459">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
         </svg>
     </div>
+    
+        
+    </section>
+
+
     {% endblock %}
