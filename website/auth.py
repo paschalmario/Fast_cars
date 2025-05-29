@@ -30,6 +30,10 @@ def login():
 @auth.route('/contact', methods=['GET', 'POST'])
 def contact():
     return render_template("contact.html", boolean=True)
+@auth.route('/about', methods=['GET', 'POST'])
+def about():
+    return render_template("about.html", boolean=True)
+
 
 @auth.route('/logout')
 def logout():

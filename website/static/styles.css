@@ -130,6 +130,7 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     color: #211C84;
     transition: 0.3s ease-in;
     outline: none;
+    width: 130px;
 }
 #reg:hover {
     background-color: #7A73D1;
@@ -148,6 +149,7 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     color: white;
     border: 2px solid white;    
     transition: 0.3s ease-in;
+    width: 130px;
 }
 #log a {
     text-decoration: none;
@@ -204,6 +206,7 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 .home-content h1 {
     font-size: 50px;
     line-height: 1.2;
+    font-weight: 700;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
     animation-delay: 1s; 
@@ -214,7 +217,7 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .home-content h3 {
-    font-size: 40px;
+    font-size: 35px;
     color: #211C84;
     opacity: 0;
     animation: slideRight 1s ease forwards;
@@ -226,6 +229,7 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .home-content p {
+    font-weight: 500;
     font-size:  16px;
     margin: 15px 0 30px;
     opacity: 0;
@@ -235,11 +239,10 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 25px;
     background: #211C84;
     border: 2px solid #211C84;
     border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     font-size: 16px;
     color: #eaeaea;
     letter-spacing: 1px;
@@ -254,6 +257,7 @@ transition:0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 .btn:hover {
     background: transparent;
     color: #211C84;
+    box-shadow: 19px 19px 22px 2px rgba(0,0,0,0.65);
 }
 
 .home-img {
@@ -910,7 +914,7 @@ footer {
     .home {
         flex-direction: column;
         align-items: center;
-        padding: 120px 5% 50px;
+        padding: 220px 5% 50px;
         text-align: center;
     }
 
@@ -923,7 +927,7 @@ footer {
         position: relative;
         width: 350px;
         height: 350px;
-        top: -300px;
+        top: -10px;
         right: 0;
     }
 
@@ -1012,9 +1016,9 @@ footer {
     }
 
     .home-img .rhombus img {
-        width: 400px;
-        top: -90px;
-        left: -140px;
+        width: 350px;
+        top: -20px;
+        left: -70px;
     }
 
     .home .rhombus2 {
