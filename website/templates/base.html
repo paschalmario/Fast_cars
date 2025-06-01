@@ -28,11 +28,11 @@
         </div>
 
     <nav class="navbar">
-        <a href="/"  style="--i:1">Home</a>
-        <a href="#" style="--i:2">About</a>
-        <a href="#" style="--i:3">Review</a>
-        <a href="#" style="--i:4">Features</a>
-        <a href="/contact" class="active" style="--i:5">Contact</a>
+        <a href="{{ url_for('views.home') }}"  style="--i:1" class="{% if current_page == 'home' %}active{% endif %}">Home</a>
+        <a href="{{ url_for('views.about') }}" style="--i:2 "class="{% if current_page == 'about' %}active{% endif %}">About</a>
+        <a href="{{ url_for('views.review') }}" style="--i:3" class="{% if current_page == 'Review' %}active{% endif %}">Review</a>
+        <a href="{{ url_for('views.features') }}" style="--i:4" class="{% if current_page == 'Features' %}active{% endif %}">Features</a>
+        <a href="{{ url_for('views.contact') }}" class="{% if current_page == 'Contact' %}active{% endif %}" style="--i:5">Contact</a>
     </nav>
     <div class="social">
         <button id="reg"  style="--i:1"><a href="/sign-up">sign-up</a></button>
