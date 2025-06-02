@@ -11,12 +11,9 @@ env/
 .env
 *.env
 
-# IDE/editor folders
-.vscode/
-.idea/
 
-# Mac/Linux system files
-.DS_Store
+
+
 
 # Flask cache/logs
 instance/
@@ -25,13 +22,13 @@ instance/
 # Compiled static files
 *.map
 
-# Database files (optional)
+
 *.sqlite3
 *.db
 
-# Node modules (if you use frontend stuff)
+
 node_modules/
 
-# Build output (if you use tools like Webpack)
+
 dist/
 build/

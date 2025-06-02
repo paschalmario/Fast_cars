@@ -20,3 +20,7 @@ def review():
 @views.route('/about')
 def about():
     return render_template("about.html", current_page='about')
+
+@views.route('/collections')
+def collections():
+    return render_template("collections.html", current_page='collections')

@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body>
+
     {% extends "base.html"%}{% block title %}Home{% endblock %}
 {% block content%}
 
@@ -39,7 +29,7 @@
                  services to meet all your travel needs. Whether you're 
                  looking for a luxury ride, an economy car, or an SUV 
                  for your next adventure, we’ve got you covered.</p>
-             <a href="#" class="btn">Explore Cars</a>
+             <a href="{{ url_for('views.collections') }}" class="btn" style="--i:5">Explore Cars</a>
         </div>
         <div class="home-img">
             <div class="rhombus">
@@ -162,10 +152,10 @@
             <img src="{{ url_for('static', filename='images/backCar4.jfif') }}" alt="profile-sample2" />
             <figcaption>
               <blockquote>
-                <p>Amazing experience, Quality cars at affordable prices</p>
+                <p>FastCars made my trip stress-free! Booking was smooth, the staff were friendly, and the car was in perfect condition. I’ll definitely use them again</p>
               </blockquote>
-              <h3>Sue Shei</h3>
-              <h5>Founder</h5>
+              <h3>Emily J.</h3>
+              <h5>Business Traveler</h5>
             </figcaption>
           </figure>
           <figure class="snip1574" data-aos="fade-down"
@@ -173,10 +163,10 @@
           data-aos-duration="1700"><img src="{{ url_for('static', filename='images/backCar2.jfif') }}" alt="profile-sample7" height="400px"/>
             <figcaption>
               <blockquote>
-                <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
+                <p>Customer support was outstanding. I had a last-minute change, and they adjusted my reservation with no hassle. Super professional!</p>
               </blockquote>
-              <h3>Will Barrow</h3>
-              <h5>Web Designer</h5>
+              <h3>James L</h3>
+              <h5>Frequent Renter</h5>
             </figcaption>
           </figure>
           <figure class="snip1574" data-aos="fade-down"
@@ -187,28 +177,11 @@
                 <p>The only skills I have the patience to learn are those that have no real application in life. </p>
               </blockquote>
               <h3>Indigo Violet</h3>
-              <h5>Public Relations</h5>
+              <h5> International Tourist</h5>
             </figcaption>
           </figure>
         </section>
-        <script>
-            const menuToggle = document.getElementById('menu-toggle');
-            const navbar = document.getElementById('navbar');
-            const menuIcon = document.getElementById('menu-icon');
-        
-            menuToggle.addEventListener('click', () => {
-                navbar.classList.toggle('active');
-        
-                // Toggle the icon
-                if (navbar.classList.contains('active')) {
-                    menuIcon.classList.remove('bx-menu');
-                    menuIcon.classList.add('bx-x');
-                } else {
-                    menuIcon.classList.remove('bx-x');
-                    menuIcon.classList.add('bx-menu');
-                }
-            });
-           </script> 
+         
         {% endblock %}
 
 </html>
