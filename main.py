@@ -1,5 +1,4 @@
 from website import create_app
-from vercel_lambda import VercelFlask
 
 app = create_app()
 
