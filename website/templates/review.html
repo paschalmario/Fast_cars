@@ -1,112 +1,74 @@
-{% extends "base.html"%}{% block title %}Home{% endblock %}
+{% extends "base.html"%}
+{% block title %}Home{% endblock %}
 {% block content%}
 
-
-<section class="testimonial-section">
-    <div class="container">
-        <h2 class="section-title">What Our Customers Say</h2>
-        <p class="subtitle">Real reviews from satisfied clients across the country.</p>
-
-        <div class="testimonial-grid">
-            <figure class="testimonial-card" data-aos="fade-up">
-                <img src="{{ url_for('static', filename='images/user1.jpeg') }}" alt="Jane Doe" class="testimonial-img">
-                <figcaption>
-                    <p class="testimonial-text">"Amazing service! The best car rental experience I've had. The process was smooth, and the car was in perfect condition."</p>
-                    <h3 class="testimonial-name">Jane Doe</h3>
-                    <span class="testimonial-role">Marketing Manager, SwiftTech</span>
-                </figcaption>
-            </figure>
-
-            <figure class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ url_for('static', filename='images/user2.jpeg') }}" alt="Mike Smith" class="testimonial-img">
-                <figcaption>
-                    <p class="testimonial-text">"Highly recommended! Reliable, budget-friendly rentals with excellent customer support. Will definitely rent again!"</p>
-                    <h3 class="testimonial-name">Mike Smith</h3>
-                    <span class="testimonial-role">Business Owner, CargoPro</span>
-                </figcaption>
-            </figure>
-
-            <figure class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
-                <img src="{{ url_for('static', filename='images/user3.jpeg') }}" alt="Emily Johnson" class="testimonial-img">
-                <figcaption>
-                    <p class="testimonial-text">"Professional and efficient. Booking online was easy, and the vehicle was ready exactly when promised."</p>
-                    <h3 class="testimonial-name">Emily Johnson</h3>
-                    <span class="testimonial-role">HR Consultant, HireWell</span>
-                </figcaption>
-            </figure>
-        </div>
+<section class="min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-gradient-to-br from-indigo-950 via-indigo-900 to-cyan-900 transition-colors duration-500 animate-fade-in">
+  <div class="w-full max-w-5xl mx-auto">
+    <h2 class="text-4xl md:text-5xl font-bold text-cyan-200 mb-4 text-center animate-slide-down">
+      What Our Customers Say
+    </h2>
+    <p class="text-cyan-100/80 text-lg mb-10 text-center animate-slide-left">
+      Real reviews from satisfied clients across the country.
+    </p>
+    <div class="flex flex-col md:flex-row gap-8 justify-center items-center animate-fade-in-up">
+      <figure class="bg-cyan-900/80 text-cyan-100 rounded-lg shadow-lg overflow-hidden max-w-xs w-full flex flex-col items-center p-8 animate-fade-in-up">
+        <img src="{{ url_for('static', filename='images/user1.jpeg') }}" alt="Jane Doe" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-cyan-400 shadow">
+        <figcaption>
+          <p class="italic text-cyan-100/90 mb-4">"Amazing service! The best car rental experience I've had. The process was smooth, and the car was in perfect condition."</p>
+          <h3 class="uppercase font-bold text-lg text-cyan-200">Jane Doe</h3>
+          <span class="text-cyan-300 text-sm">Marketing Manager, SwiftTech</span>
+        </figcaption>
+      </figure>
+      <figure class="bg-cyan-900/80 text-cyan-100 rounded-lg shadow-lg overflow-hidden max-w-xs w-full flex flex-col items-center p-8 animate-fade-in-up">
+        <img src="{{ url_for('static', filename='images/user2.jpeg') }}" alt="Mike Smith" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-cyan-400 shadow">
+        <figcaption>
+          <p class="italic text-cyan-100/90 mb-4">"Highly recommended! Reliable, budget-friendly rentals with excellent customer support. Will definitely rent again!"</p>
+          <h3 class="uppercase font-bold text-lg text-cyan-200">Mike Smith</h3>
+          <span class="text-cyan-300 text-sm">Business Owner, CargoPro</span>
+        </figcaption>
+      </figure>
+      <figure class="bg-cyan-900/80 text-cyan-100 rounded-lg shadow-lg overflow-hidden max-w-xs w-full flex flex-col items-center p-8 animate-fade-in-up">
+        <img src="{{ url_for('static', filename='images/user3.jpeg') }}" alt="Emily Johnson" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-cyan-400 shadow">
+        <figcaption>
+          <p class="italic text-cyan-100/90 mb-4">"Professional and efficient. Booking online was easy, and the vehicle was ready exactly when promised."</p>
+          <h3 class="uppercase font-bold text-lg text-cyan-200">Emily Johnson</h3>
+          <span class="text-cyan-300 text-sm">HR Consultant, HireWell</span>
+        </figcaption>
+      </figure>
     </div>
+  </div>
 </section>
 
-
 <style>
-    .testimonial-section {
-    padding: 60px 20px;
-    background-color: #f8f9fa;
-    text-align: center;
+@keyframes fade-in {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
 }
-
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #333;
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(40px);}
+  100% { opacity: 1; transform: translateY(0);}
 }
-
-.subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-    color: #555;
+@keyframes slide-down {
+  0% { opacity: 0; transform: translateY(-60px);}
+  100% { opacity: 1; transform: translateY(0);}
 }
-
-.testimonial-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+@keyframes slide-right {
+  0% { opacity: 0; transform: translateX(-60px);}
+  100% { opacity: 1; transform: translateX(0);}
 }
-
-.testimonial-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    padding: 20px;
-    max-width: 300px;
-    transition: transform 0.3s ease;
+@keyframes slide-left {
+  0% { opacity: 0; transform: translateX(60px);}
+  100% { opacity: 1; transform: translateX(0);}
 }
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-}
-
-.testimonial-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-.testimonial-text {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.testimonial-name {
-    font-weight: bold;
-    margin-bottom: 4px;
-    color: #222;
-}
-
-.testimonial-role {
-    font-size: 0.9rem;
-    color: #777;
-}
-
+.animate-fade-in { animation: fade-in 1s both; }
+.animate-fade-in-up { animation: fade-in-up 1s 0.2s both; }
+.animate-slide-down { animation: slide-down 1s 0.2s both; }
+.animate-slide-right { animation: slide-right 1s 0.4s both; }
+.animate-slide-left { animation: slide-left 1s 0.6s both; }
 </style>
 
 <script>
-    AOS.init();
+  if (window.AOS) AOS.init();
 </script>
 
-   {% endblock %}
+{% endblock %}
