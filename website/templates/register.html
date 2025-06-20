@@ -1,80 +1,64 @@
-
 {% extends "base.html"%}
-{% block content%}
-<body style="background: #7A73D1;">
-    <!-- <header class="header">
-        <a href="#" class="Logo">FastCars.</a>
 
-        <nav class="navbar">
-            <a href="/"  style="--i:1">Home</a>
-            <a href="/contact" style="--i:2">Contact</a>
-        </nav>
-
-        <div class="social-media">
-            <a href="#" style="--i:1" class="active"><i class='bx bxl-twitter'> </i></a>
-            <a href="#" style="--i:2"><i class='bx bxl-facebook'></i></a>
-            <a href="#" style="--i:3"><i class='bx bxl-instagram-alt'></i></a>
-        </div>
-    </header> -->
-    {% with messages = get_flashed_messages(with_categories=true) %} {% if
-        messages %} {% for category, message in messages %} {% if category ==
-        'error' %}
-        <div class="alert alert-danger alter-dismissable fade show" role="alert">
-          {{ message }}
-          <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        {% else %}
-        <div class="alert alert-success alter-dismissable fade show" role="alert">
-          {{ message }}
-
-          <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        {% endif %} {% endfor %} {% endif %} {% endwith %}
-    <section class="Login">
-        <div class="Login_img">
-            <img src="{{url_for('static', filename='images/10815908.png')}}" alt="">
-        </div>
-        
-        <div class="Login-form">
-            <h1>Welcome to Fast Cars</h1>
-            <p>Best Car renting experience</p>
-            <form method="POST">
-                <label for="firstname">Enter your First name</label>
-                <input type="text" name="firstname" id="Firstname" placeholder="eg. John"><br>
-                <label for="Lastname">Enter your Last name</label>
-                <input type="text" name="Lastname" id="Lastname" placeholder="Last Name"><br>
-                <label for="Phone Number">Input Phone Number</label>
-                <input type="number" id="PhoneNumber" name="PhoneNumber" placeholder="+234 80-123-23-234"><br>
-                <label for="email">Enter your email</label>
-                <input type="email" name="email" id="email" placeholder="johnret@gmail.com"><br>
-                <br>
-                <label for="password1">Enter password</label>
-                <input type="password"  id="password1"
-                name="password1" placeholder=""><br>
-                 <label for="password2">re-Enter password</label>
-                <input type="password"id="password2"
-                name="password2" placeholder=""><br>
-                
-                <button type="submit">Sign in</button>
-
-                <p>Already have an account <a style="cursor: pointer;"  onclick="window.location.href='login.html'">Log-in to account</a></p>
-            </form>
-            
-             
-        </div>
-        
-    <div class="custom-shape-divider-top-1742059459">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-        </svg>
+{% block content %}
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-950 via-indigo-900 to-cyan-900 px-4 py-12">
+  <div class="w-full max-w-2xl bg-cyan-900/80 rounded-xl shadow-xl flex flex-col md:flex-row items-center p-8 md:p-12 gap-8">
+    <div class="hidden md:block flex-1">
+      <img src="{{url_for('static', filename='images/10815908.png')}}" alt="Register illustration" class="w-64 h-auto mx-auto" />
     </div>
-    
-        
-    </section>
-
-
-    {% endblock %}
+    <div class="flex-1 w-full">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="mb-4 px-4 py-3 rounded {{ 'bg-red-100 text-red-700' if category == 'error' else 'bg-green-100 text-green-700' }}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <h1 class="text-2xl md:text-3xl font-bold text-cyan-200 mb-2 text-center">Welcome to Fast Cars</h1>
+      <p class="text-cyan-100 text-center mb-4">Best Car renting experience</p>
+      <form method="POST" class="space-y-4">
+        <div>
+          <label for="firstname" class="block text-cyan-100 mb-1">Enter your First name</label>
+          <input type="text" name="firstName" id="firstname" placeholder="eg. John"
+            class="w-full px-4 py-2 rounded bg-cyan-900 text-cyan-100 border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 placeholder-cyan-300" required>
+        </div>
+        <div>
+          <label for="lastname" class="block text-cyan-100 mb-1">Enter your Last name</label>
+          <input type="text" name="Lastname" id="lastname" placeholder="Last Name"
+            class="w-full px-4 py-2 rounded bg-cyan-900 text-cyan-100 border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 placeholder-cyan-300">
+        </div>
+        <div>
+          <label for="PhoneNumber" class="block text-cyan-100 mb-1">Input Phone Number</label>
+          <input type="tel" id="PhoneNumber" name="PhoneNumber" placeholder="+234 80-123-23-234"
+            class="w-full px-4 py-2 rounded bg-cyan-900 text-cyan-100 border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 placeholder-cyan-300">
+        </div>
+        <div>
+          <label for="email" class="block text-cyan-100 mb-1">Enter your email</label>
+          <input type="email" name="email" id="email" placeholder="johnret@gmail.com"
+            class="w-full px-4 py-2 rounded bg-cyan-900 text-cyan-100 border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 placeholder-cyan-300" required>
+        </div>
+        <div>
+          <label for="password1" class="block text-cyan-100 mb-1">Enter password</label>
+          <input type="password" id="password1" name="password1" placeholder=""
+            class="w-full px-4 py-2 rounded bg-cyan-900 text-cyan-100 border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 placeholder-cyan-300" required>
+        </div>
+        <div>
+          <label for="password2" class="block text-cyan-100 mb-1">Re-enter password</label>
+          <input type="password" id="password2" name="password2" placeholder=""
+            class="w-full px-4 py-2 rounded bg-cyan-900 text-cyan-100 border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 placeholder-cyan-300" required>
+        </div>
+        <button type="submit"
+          class="w-full py-2 bg-cyan-400 text-indigo-900 font-semibold rounded hover:bg-cyan-300 hover:text-indigo-800 transition">
+          Sign up
+        </button>
+        <p class="text-cyan-100 text-center mt-2">
+          Already have an account?
+          <a href="{{ url_for('auth.login') }}" class="text-cyan-300 hover:underline">Log-in to account</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

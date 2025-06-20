@@ -1,34 +1,32 @@
 {% extends "base.html"%}
-{% block title %}Home{% endblock %}
+{% block title %}Review{% endblock %}
 {% block content%}
 
-<section class="min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-gradient-to-br from-indigo-950 via-indigo-900 to-cyan-900 transition-colors duration-500 animate-fade-in">
+<section class="min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-gradient-to-br from-indigo-950 via-indigo-900 to-cyan-900">
   <div class="w-full max-w-5xl mx-auto">
-    <h2 class="text-4xl md:text-5xl font-bold text-cyan-200 mb-4 text-center animate-slide-down">
-      What Our Customers Say
-    </h2>
-    <p class="text-cyan-100/80 text-lg mb-10 text-center animate-slide-left">
+    <h2 class="text-4xl md:text-5xl font-bold text-cyan-200 mb-4 text-center">What Our Customers Say</h2>
+    <p class="text-cyan-100/80 text-lg mb-10 text-center">
       Real reviews from satisfied clients across the country.
     </p>
-    <div class="flex flex-col md:flex-row gap-8 justify-center items-center animate-fade-in-up">
-      <figure class="bg-cyan-900/80 text-cyan-100 rounded-lg shadow-lg overflow-hidden max-w-xs w-full flex flex-col items-center p-8 animate-fade-in-up">
-        <img src="{{ url_for('static', filename='images/user1.jpeg') }}" alt="Jane Doe" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-cyan-400 shadow">
+    <div class="flex flex-col md:flex-row gap-8 justify-center items-center">
+      <figure class="bg-cyan-900/80 text-cyan-100 rounded-lg shadow-lg overflow-hidden max-w-xs w-full flex flex-col items-center p-8">
+        <img src="{{ url_for('static', filename='images/user1.jpeg') }}" alt="Jane Doe" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-cyan-400 shadow" />
         <figcaption>
           <p class="italic text-cyan-100/90 mb-4">"Amazing service! The best car rental experience I've had. The process was smooth, and the car was in perfect condition."</p>
           <h3 class="uppercase font-bold text-lg text-cyan-200">Jane Doe</h3>
           <span class="text-cyan-300 text-sm">Marketing Manager, SwiftTech</span>
         </figcaption>
       </figure>
-      <figure class="bg-cyan-900/80 text-cyan-100 rounded-lg shadow-lg overflow-hidden max-w-xs w-full flex flex-col items-center p-8 animate-fade-in-up">
-        <img src="{{ url_for('static', filename='images/user2.jpeg') }}" alt="Mike Smith" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-cyan-400 shadow">
+      <figure class="bg-cyan-900/80 text-cyan-100 rounded-lg shadow-lg overflow-hidden max-w-xs w-full flex flex-col items-center p-8">
+        <img src="{{ url_for('static', filename='images/user2.jpeg') }}" alt="Mike Smith" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-cyan-400 shadow" />
         <figcaption>
           <p class="italic text-cyan-100/90 mb-4">"Highly recommended! Reliable, budget-friendly rentals with excellent customer support. Will definitely rent again!"</p>
           <h3 class="uppercase font-bold text-lg text-cyan-200">Mike Smith</h3>
           <span class="text-cyan-300 text-sm">Business Owner, CargoPro</span>
         </figcaption>
       </figure>
-      <figure class="bg-cyan-900/80 text-cyan-100 rounded-lg shadow-lg overflow-hidden max-w-xs w-full flex flex-col items-center p-8 animate-fade-in-up">
-        <img src="{{ url_for('static', filename='images/user3.jpeg') }}" alt="Emily Johnson" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-cyan-400 shadow">
+      <figure class="bg-cyan-900/80 text-cyan-100 rounded-lg shadow-lg overflow-hidden max-w-xs w-full flex flex-col items-center p-8">
+        <img src="{{ url_for('static', filename='images/user3.jpeg') }}" alt="Emily Johnson" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-cyan-400 shadow" />
         <figcaption>
           <p class="italic text-cyan-100/90 mb-4">"Professional and efficient. Booking online was easy, and the vehicle was ready exactly when promised."</p>
           <h3 class="uppercase font-bold text-lg text-cyan-200">Emily Johnson</h3>
@@ -38,37 +36,5 @@
     </div>
   </div>
 </section>
-
-<style>
-@keyframes fade-in {
-  0% { opacity: 0;}
-  100% { opacity: 1;}
-}
-@keyframes fade-in-up {
-  0% { opacity: 0; transform: translateY(40px);}
-  100% { opacity: 1; transform: translateY(0);}
-}
-@keyframes slide-down {
-  0% { opacity: 0; transform: translateY(-60px);}
-  100% { opacity: 1; transform: translateY(0);}
-}
-@keyframes slide-right {
-  0% { opacity: 0; transform: translateX(-60px);}
-  100% { opacity: 1; transform: translateX(0);}
-}
-@keyframes slide-left {
-  0% { opacity: 0; transform: translateX(60px);}
-  100% { opacity: 1; transform: translateX(0);}
-}
-.animate-fade-in { animation: fade-in 1s both; }
-.animate-fade-in-up { animation: fade-in-up 1s 0.2s both; }
-.animate-slide-down { animation: slide-down 1s 0.2s both; }
-.animate-slide-right { animation: slide-right 1s 0.4s both; }
-.animate-slide-left { animation: slide-left 1s 0.6s both; }
-</style>
-
-<script>
-  if (window.AOS) AOS.init();
-</script>
 
 {% endblock %}

@@ -16,7 +16,6 @@ def create_app():
     from .views import views
     from .auth import auth
 
-
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
 
@@ -32,11 +31,9 @@ def create_app():
     def load_user(id):
         return User.query.get(int(id))
 
-
     return app
 
 def create_database(app):
     if not path.exists('website/' + DB_NAME):
         with app.app_context():
             db.create_all()
-            print('Created Database!')

@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<section class="min-h-screen flex flex-col items-center justify-center px-2 sm:px-4 py-8 sm:py-12 bg-gradient-to-br from-indigo-950 via-indigo-900 to-cyan-900 transition-colors duration-500 animate-fade-in">
+<section class="min-h-screen flex flex-col items-center justify-center px-2 sm:px-4 py-8 sm:py-12 bg-gradient-to-br from-indigo-950 via-indigo-900 to-cyan-900">
   <div class="w-full max-w-6xl mx-auto">
-    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-200 mb-6 sm:mb-8 text-center animate-slide-down">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-200 mb-6 sm:mb-8 text-center">
       Explore Our Collections
     </h2>
     <!-- Search Bar -->
-    <div class="flex items-center justify-center mb-8 sm:mb-10 animate-fade-in-up">
+    <div class="flex items-center justify-center mb-8 sm:mb-10">
       <div class="relative w-full max-w-md">
         <span class="absolute left-4 top-1/2 -translate-y-1/2 text-cyan-400 text-xl">
           <i class="bx bx-search"></i>
@@ -17,26 +17,26 @@
       </div>
     </div>
     <!-- Car Grid -->
-    <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 animate-fade-in-up" id="carGrid">
-      <div class="bg-cyan-900/80 rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center hover:scale-105 transition animate-fade-in-up car-card" data-name="BMW M4 Coupe" data-desc="Luxury 2022 Auto Petrol">
+    <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8" id="carGrid">
+      <div class="bg-cyan-900/80 rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center hover:scale-105 transition car-card" data-name="BMW M4 Coupe" data-desc="Luxury 2022 Auto Petrol">
         <img src="{{ url_for('static', filename='images/2022_Hyundai_Tucson_PHEV_Revealed__Offers_32-Mile_Electric_Range-removebg-preview.png') }}" alt="Luxury Car" class="w-full h-40 sm:h-48 object-contain rounded mb-3 sm:mb-4">
         <h3 class="text-cyan-200 font-semibold text-base sm:text-lg mb-1 sm:mb-2">BMW M4 Coupe</h3>
         <p class="text-cyan-100/80 mb-2 text-xs sm:text-sm">Luxury | 2022 | Auto | Petrol</p>
         <button class="bg-cyan-400 text-indigo-900 font-semibold px-4 py-2 rounded hover:bg-cyan-300 hover:text-indigo-800 transition w-full sm:w-auto">Rent Now</button>
       </div>
-      <div class="bg-cyan-900/80 rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center hover:scale-105 transition animate-fade-in-up car-card" data-name="Range Rover Evoque" data-desc="SUV 2021 AWD Diesel">
+      <div class="bg-cyan-900/80 rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center hover:scale-105 transition car-card" data-name="Range Rover Evoque" data-desc="SUV 2021 AWD Diesel">
         <img src="{{ url_for('static', filename='images/Bold_Style_Meets_Urban_Elegance_-_Audi_R8_Coupe_GT_in_the_Heart_of_the_City-removebg-preview.png') }}" alt="SUV" class="w-full h-40 sm:h-48 object-contain rounded mb-3 sm:mb-4">
         <h3 class="text-cyan-200 font-semibold text-base sm:text-lg mb-1 sm:mb-2">Range Rover Evoque</h3>
         <p class="text-cyan-100/80 mb-2 text-xs sm:text-sm">SUV | 2021 | AWD | Diesel</p>
         <button class="bg-cyan-400 text-indigo-900 font-semibold px-4 py-2 rounded hover:bg-cyan-300 hover:text-indigo-800 transition w-full sm:w-auto">Rent Now</button>
       </div>
-      <div class="bg-cyan-900/80 rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center hover:scale-105 transition animate-fade-in-up car-card" data-name="Toyota Corolla" data-desc="Economy 2020 Manual Hybrid">
+      <div class="bg-cyan-900/80 rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center hover:scale-105 transition car-card" data-name="Toyota Corolla" data-desc="Economy 2020 Manual Hybrid">
         <img src="{{ url_for('static', filename='cars/economy1.jpg') }}" alt="Economy Car" class="w-full h-40 sm:h-48 object-contain rounded mb-3 sm:mb-4">
         <h3 class="text-cyan-200 font-semibold text-base sm:text-lg mb-1 sm:mb-2">Toyota Corolla</h3>
         <p class="text-cyan-100/80 mb-2 text-xs sm:text-sm">Economy | 2020 | Manual | Hybrid</p>
         <button class="bg-cyan-400 text-indigo-900 font-semibold px-4 py-2 rounded hover:bg-cyan-300 hover:text-indigo-800 transition w-full sm:w-auto">Rent Now</button>
       </div>
-      <div class="bg-cyan-900/80 rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center hover:scale-105 transition animate-fade-in-up car-card" data-name="Chevrolet Camaro" data-desc="Sports 2023 RWD Petrol">
+      <div class="bg-cyan-900/80 rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center hover:scale-105 transition car-card" data-name="Chevrolet Camaro" data-desc="Sports 2023 RWD Petrol">
         <img src="{{ url_for('static', filename='cars/sports1.jpg') }}" alt="Sports Car" class="w-full h-40 sm:h-48 object-contain rounded mb-3 sm:mb-4">
         <h3 class="text-cyan-200 font-semibold text-base sm:text-lg mb-1 sm:mb-2">Chevrolet Camaro</h3>
         <p class="text-cyan-100/80 mb-2 text-xs sm:text-sm">Sports | 2023 | RWD | Petrol</p>
@@ -47,7 +47,6 @@
 </section>
 
 <script>
-// filepath: c:\Users\USER\Desktop\FastCars\website\templates\collections.html
 document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.getElementById('searchInput');
   const carCards = document.querySelectorAll('.car-card');
@@ -56,120 +55,10 @@ document.addEventListener('DOMContentLoaded', function () {
     carCards.forEach(card => {
       const name = card.getAttribute('data-name').toLowerCase();
       const desc = card.getAttribute('data-desc').toLowerCase();
-      if (name.includes(query) || desc.includes(query)) {
-        card.style.display = 'flex';
-      } else {
-        card.style.display = 'none';
-      }
+      card.style.display = (name.includes(query) || desc.includes(query)) ? 'flex' : 'none';
     });
   });
 });
 </script>
-<style>
-@media (max-width: 640px) {
-  .xs\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-@keyframes fade-in {
-  0% { opacity: 0;}
-  100% { opacity: 1;}
-}
-@keyframes fade-in-up {
-  0% { opacity: 0; transform: translateY(40px);}
-  100% { opacity: 1; transform: translateY(0);}
-}
-@keyframes slide-down {
-  0% { opacity: 0; transform: translateY(-60px);}
-  100% { opacity: 1; transform: translateY(0);}
-}
-@keyframes slide-right {
-  0% { opacity: 0; transform: translateX(-60px);}
-  100% { opacity: 1; transform: translateX(0);}
-}
-@keyframes slide-left {
-  0% { opacity: 0; transform: translateX(60px);}
-  100% { opacity: 1; transform: translateX(0);}
-}
-@keyframes zoom-in {
-  0% { opacity: 0; transform: scale(0.7);}
-  100% { opacity: 1; transform: scale(1);}
-}
-.animate-fade-in { animation: fade-in 1s both; }
-.animate-fade-in-up { animation: fade-in-up 1s 0.2s both; }
-.animate-slide-down { animation: slide-down 1s 0.2s both; }
-.animate-slide-right { animation: slide-right 1s 0.4s both; }
-.animate-slide-left { animation: slide-left 1s 0.6s both; }
-.animate-zoom-in { animation: zoom-in 1s 0.8s both; }
-</style>
 <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-{% endblock %}
-    }
-
-    @media (max-width: 768px) {
-      .collections-section h2 {
-        font-size: 2rem;
-      }
-    }
-  </style>
-
-  <section class="collections-section">
-    <h2>Explore Our Collections</h2>
-
-    <!-- 🔍 Search Bar -->
-    <div class="search-bar">
-      <i class="bx bx-search"></i>
-      <input type="text" id="searchInput" placeholder="Search cars by name or type...">
-    </div>
-
-    <div class="car-grid" id="carGrid">
-      <div class="car-card">
-        <img src="{{ url_for('static', filename='images/2022_Hyundai_Tucson_PHEV_Revealed__Offers_32-Mile_Electric_Range-removebg-preview.png') }}" alt="Luxury Car">
-        <h3>BMW M4 Coupe</h3>
-        <p>Luxury | 2022 | Auto | Petrol</p>
-        <button>Rent Now</button>
-      </div>
-
-
-      <div class="car-card">
-        <img src="{{ url_for('static', filename='images/Bold_Style_Meets_Urban_Elegance_-_Audi_R8_Coupe_GT_in_the_Heart_of_the_City-removebg-preview.png') }}" alt="SUV">
-        <h3>Range Rover Evoque</h3>
-        <p>SUV | 2021 | AWD | Diesel</p>
-        <button>Rent Now</button>
-      </div>
-
-      <div class="car-card">
-        <img src="{{ url_for('static', filename='cars/economy1.jpg') }}" alt="Economy Car">
-        <h3>Toyota Corolla</h3>
-        <p>Economy | 2020 | Manual | Hybrid</p>
-        <button>Rent Now</button>
-      </div>
-
-
-      <div class="car-card">
-        <img src="{{ url_for('static', filename='cars/sports1.jpg') }}" alt="Sports Car">
-        <h3>Chevrolet Camaro</h3>
-        <p>Sports | 2023 | RWD | Petrol</p>
-        <button>Rent Now</button>
-      </div>
-    </div>
-  </section>
-
-
-  <script>
-    const searchInput = document.getElementById('searchInput');
-    const carCards = document.querySelectorAll('.car-card');
-
-    searchInput.addEventListener('input', function () {
-      const query = this.value.toLowerCase();
-      carCards.forEach(card => {
-        const name = card.querySelector('h3').textContent.toLowerCase();
-        const desc = card.querySelector('p').textContent.toLowerCase();
-        card.style.display = name.includes(query) || desc.includes(query) ? 'block' : 'none';
-      });
-    });
-  </script>
-
-
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 {% endblock %}
