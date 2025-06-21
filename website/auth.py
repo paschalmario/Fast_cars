@@ -24,13 +24,12 @@ def login():
 
     return render_template("login.html", user=current_user)
 
-@auth.route('/contact', methods=['GET', 'POST'])
-def contact():
-    return render_template("contact.html", boolean=True)
-
 @auth.route('/logout')
+@login_required
 def logout():
-    return "<p>Logout</p>"
+    logout_user()
+    flash('You have been logged out.', category='success')
+    return redirect(url_for('auth.login'))
 
 @auth.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():

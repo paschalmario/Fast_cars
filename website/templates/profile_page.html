@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+<section class="min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-gradient-to-br from-indigo-950 via-indigo-900 to-cyan-900">
+  <div class="w-full max-w-2xl mx-auto bg-cyan-900/80 rounded-xl shadow-xl p-8 md:p-14 flex flex-col items-center animate-fade-in-up">
+    <div class="flex flex-col items-center mb-8">
+      <img src="{{ user.profile_pic_url if user.profile_pic_url else url_for('static', filename='images/default-profile.png') }}" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-cyan-400 object-cover mb-4">
+      <h2 class="text-3xl font-bold text-cyan-200 mb-1">{{ user.first_name|capitalize }}</h2>
+      <p class="text-cyan-100 text-lg">{{ user.email }}</p>
+    </div>
+    <div class="w-full flex flex-col gap-6">
+      <div class="bg-cyan-950/80 rounded-lg p-6 flex flex-col gap-2">
+        <h3 class="text-cyan-200 font-semibold text-lg mb-2">Account Details</h3>
+        <div class="flex flex-col gap-1">
+          <span class="text-cyan-100">Full Name: <span class="font-semibold">{{ user.first_name }}</span></span>
+          <span class="text-cyan-100">Email: <span class="font-semibold">{{ user.email }}</span></span>
+        </div>
+      </div>
+      <div class="bg-cyan-950/80 rounded-lg p-6 flex flex-col gap-2">
+        <h3 class="text-cyan-200 font-semibold text-lg mb-2">Your Rentals</h3>
+        <p class="text-cyan-100/80">You have no active rentals at the moment.</p>
+        <!-- In a real app, loop through user's rentals here -->
+      </div>
+      <div class="flex justify-end">
+        <a href="/logout" class="px-6 py-2 bg-cyan-400 text-indigo-900 font-semibold rounded hover:bg-cyan-300 hover:text-indigo-800 transition">Logout</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -26,3 +26,7 @@ def about():
 @views.route('/collections')
 def collections():
     return render_template("collections.html", current_page='collections', user=current_user)
+
+@views.route('/profile')
+def profile_page():
+    return render_template("profile_page.html", current_page='profile', user=current_user)
