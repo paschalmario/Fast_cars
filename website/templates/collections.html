@@ -5,7 +5,6 @@
     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-200 mb-6 sm:mb-8 text-center">
       Explore Our Collections
     </h2>
-    <!-- Search Bar -->
     <div class="flex items-center justify-center mb-8 sm:mb-10">
       <div class="relative w-full max-w-md">
         <span class="absolute left-4 top-1/2 -translate-y-1/2 text-cyan-400 text-xl">
@@ -16,7 +15,6 @@
           placeholder="Search cars by name or type...">
       </div>
     </div>
-    <!-- Car Grid -->
     <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8" id="carGrid">
       <div class="bg-cyan-900/80 rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center hover:scale-105 transition car-card" data-name="BMW M4 Coupe" data-desc="Luxury 2022 Auto Petrol">
         <img src="{{ url_for('static', filename='images/2022_Hyundai_Tucson_PHEV_Revealed__Offers_32-Mile_Electric_Range-removebg-preview.png') }}" alt="Luxury Car" class="w-full h-40 sm:h-48 object-contain rounded mb-3 sm:mb-4">
